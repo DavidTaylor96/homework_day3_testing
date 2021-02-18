@@ -3,8 +3,8 @@ const IsogramFinder = function (word) {
 }
 
 IsogramFinder.prototype.isIsogram = function () {
-  return this.word.every((word, index) => {
-    return this.word.indexOf(word) === index
+  return this.word.every((word, letter) => {
+    return this.word.indexOf(word) === letter
   });
 };
 
