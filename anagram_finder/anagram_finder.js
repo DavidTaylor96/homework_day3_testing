@@ -1,11 +1,11 @@
 const AnagramFinder = function (word) {
-  this.word = word.split('');
-  console.log(this.work)
+  this.word = word.toLowerCase();
 }
 
 AnagramFinder.prototype.findAnagrams = function (otherWords) {
   return otherWords.filter((otherWord) => {
-    return otherWord.split('') === this.word.length
+    if (otherWord.toLowerCase() === this.word) return false;
+    return otherWord.toLowerCase().split('').sort().join('') === this.word.split('').sort().join('')
   })
 }
 
