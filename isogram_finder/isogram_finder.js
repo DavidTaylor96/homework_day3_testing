@@ -3,9 +3,8 @@ const IsogramFinder = function (word) {
 }
 
 IsogramFinder.prototype.isIsogram = function () {
-  count = 1
-  return this.word.every((banana, index) => {
-    return this.word.indexOf(banana) === index
+  return this.word.every((letter, index) => {
+    return this.word.indexOf(letter) === index
   });
 };
 
